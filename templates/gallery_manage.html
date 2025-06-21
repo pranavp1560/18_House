@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manage Gallery</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/gallery.css') }}">
+</head>
+<body>
+  <nav>
+    <div class="logo">🏠 18 HOUSE</div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/vargani">Vargani</a></li>
+      <li><a href="/vargani_list">Vargani List</a></li>
+      <li><a href="/dashboard">Dashboard</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Upload Image</h2>
+    <form method="POST" enctype="multipart/form-data" class="upload-form">
+      <input type="text" name="caption" placeholder="Caption" required>
+      <input type="file" name="image" accept="image/*" required>
+      <button type="submit">Upload</button>
+    </form>
+
+    <h3>Gallery</h3>
+    <div class="gallery-grid">
+      {% for img in gallery %}
+        <div class="card">
+          <img src="{{ url_for('static', filename='uploads/gallery/' ~ img.filename) }}" alt="Gallery Image">
+          <p class="caption">{{ img.caption }}</p>
+          <a href="/delete_image/{{ img.id }}" class="delete-btn">🗑️ Delete</a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+</html>

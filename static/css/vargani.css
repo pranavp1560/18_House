@@ -1,0 +1,269 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #fff3e0, #ffe0b2);
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px; /* push content down below navbar */
+  }
+  
+  .container {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 1000px;
+    margin: 0px auto;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 25px;
+    color: #e65100;
+    font-size: 28px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    background: #fffdf5;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  thead {
+    background: linear-gradient(to right, #ff9800, #ff6f00);
+    color: white;
+  }
+  
+  th, td {
+    padding: 15px 20px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  tbody tr:hover {
+    background-color: #fff3e0;
+    transition: 0.3s ease;
+  }
+  
+  td {
+    color: #444;
+    font-weight: 500;
+  }
+  
+  th:first-child, td:first-child {
+    color: #bf360c;
+    font-weight: bold;
+  }
+  
+  
+  form input, form button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ff9800;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #ff6f00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+  }
+  
+  button:hover {
+    background-color: #e65100;
+  }
+  nav {
+    background: linear-gradient(to right, #ff9800, #e65100);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: 700;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ease;
+    font-size: 16px;
+  }
+  
+  .nav-links li a:hover {
+    color: #ffd180;
+    text-decoration: underline;
+  }
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+  
+    .navbar-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .main-content {
+      padding: 120px 10px 40px 10px;
+    }
+  
+    table {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* nav {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+    } */
+  
+    /* .logo {
+      font-size: 20px;
+      margin-bottom: 10px;
+    } */
+  
+    /* .nav-links {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      width: 100%;
+    } */
+  
+    /* .nav-links li a {
+      font-size: 14px;
+    } */
+  
+    .main-content {
+      padding: 120px 10px 40px 10px;
+    }
+  
+    table {
+      font-size: 14px;
+    }
+  
+    th, td {
+      padding: 10px;
+      word-wrap: break-word;
+    }
+  }
+  .total-vargani-box {
+    background: #fff8e1;
+    border: 2px solid #f0b400;
+    border-radius: 12px;
+    padding: 15px 25px;
+    margin: 50px auto 0px;
+   
+    width: fit-content;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .total-vargani-box .money-emoji {
+    font-size: 1.5rem;
+  }
+  
+  .total-vargani-box .total-label {
+    color: #ff6f00;
+    font-weight: 700;
+  }
+  
+  .total-vargani-box .total-amount {
+    color: #2e7d32;
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+  
+  .table-wrapper {
+    overflow-x: auto;
+    margin: 20px 0;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+  }
+  
+  table th, table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .btn {
+      padding: 10px 14px;
+      margin: 5px 3px;
+      font-size: 14px;
+      display: block;
+      text-align: center;
+    }
+  
+    .global-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+  
+    .table-wrapper {
+      margin: 10px;
+    }
+  
+    .search-box input {
+      width: 90%;
+    }
+  
+    h2 {
+      font-size: 22px;
+      text-align: center;
+    }
+  }
+  
+  
+  

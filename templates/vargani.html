@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vargani Entry</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/vargani.css') }}">
+</head>
+<body>
+      <!-- Navbar -->
+      <nav>
+        <div class="logo">🏠 18 HOUSE</div>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/events">Events</a></li>
+          <li><a href="/gallery">Gallery</a></li>
+          <li><a href="/dashboard">Dashboard</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+      
+<main class="main-content">
+  <div class="container">
+    <h2>🙏 Vargani Nond Form</h2>
+    <form action="/submit_vargani" method="post">
+      <input type="text" name="name" placeholder="Nav (Name)" required>
+      <input type="number" name="amount" placeholder="Vargani Rakkam (Amount)" required>
+      <input type="text" name="contact" placeholder="Contact Number" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</main>
+</body>
+</html>

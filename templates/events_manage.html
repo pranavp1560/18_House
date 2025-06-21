@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Manage Events</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/events.css') }}">
+</head>
+<body>
+  <nav>
+    <div class="logo">🏠 18 HOUSE</div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/events">Events</a></li>
+      <li><a href="/gallery">Gallery</a></li>
+      <li><a href="/dashboard">Dashboard</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h2>Add New Event</h2>
+    <form method="POST" enctype="multipart/form-data">
+      <input name="title" placeholder="Event Title" required><br><br>
+      <textarea name="description" placeholder="Description" required></textarea><br><br>
+      <input type="date" name="event_date" required><br><br>
+      <input type="file" name="image" accept="image/*" required><br><br>
+      <button type="submit">Add Event</button>
+    </form>
+
+    <h3>All Events</h3>
+    <div class="events-grid">
+      {% for event in events %}
+        <div class="event-card">
+          <img src="{{ url_for('static', filename='uploads/events/' + event.image_filename) }}" alt="Event Image">
+          <h3>{{ event.title }}</h3>
+          <p>{{ event.description }} <br><small>📅 {{ event.event_date }}</small></p>
+          <a href="/delete_event/{{ event.id }}">🗑️</a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</body>
+</html>

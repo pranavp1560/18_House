@@ -1,0 +1,147 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fff3e0;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background: linear-gradient(to right, #ff9800, #e65100);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.container {
+  background: #fff;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 1000px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+form input,
+form textarea,
+form button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #e65100;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+form button {
+  background: #ff6f00;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #e65100;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  overflow-x: auto;
+}
+
+thead {
+  background: #e65100;
+  color: white;
+}
+
+td, th {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  word-break: break-word;
+}
+
+.summary p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* 🔽 Responsive Adjustments */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+/* Wrap table in a responsive scroll container */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Keep table horizontal layout */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  min-width: 600px; /* ensure the table doesn't shrink too much */
+}
+
+thead {
+  background: #e65100;
+  color: white;
+}
+
+td, th {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* No more vertical stacking! */
+@media (max-width: 768px) {
+  td, th {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .summary p {
+    font-size: 16px;
+  }
+}
+}

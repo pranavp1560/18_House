@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">🏠 18 HOUSE Admin</div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/vargani_list">Vargani List</a></li>
+      <li><a href="/expense">Expenses</a></li>
+      <li><a href="/view_events">Events</a></li>
+      <li><a href="/galleryview">Gallery</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </nav>
+
+  <main class="dashboard-container">
+    <h2>📊 Admin Dashboard</h2>
+    <div class="dashboard-grid">
+      <a href="/vargani" class="card vargani">
+        <h3>💰 Vargani</h3>
+        <p>Manage Vargani Records</p>
+      </a>
+      <a href="/vargani_list" class="card vargani">
+        <h3>💰Vargani List</h3>
+        <p>Manage Vargani Records</p>
+      </a>
+      <a href="/expense" class="card expense">
+        <h3>📉 Expenses</h3>
+        <p>View & Add Expenses</p>
+      </a>
+      <a href="/events" class="card event">
+        <h3>📅 Events</h3>
+        <p>Create & Edit Events</p>
+      </a>
+      <a href="/gallery" class="card gallery">
+        <h3>🖼️ Gallery</h3>
+        <p>Upload & Manage Photos</p>
+      </a>
+    </div>
+  </main>
+
+</body>
+</html>

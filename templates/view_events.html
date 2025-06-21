@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Events - 18 HOUSE</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/view_events.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">🏠 18 HOUSE</div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/events">Events</a></li>
+      <li><a href="/gallery">Gallery</a></li>
+      <li><a href="/dashboard">Dashboard</a></li>
+      <li><a href="/logout">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Section -->
+  <main class="main-section">
+    <h2>📅 Mandal Events</h2>
+    <div class="events-grid">
+      {% for event in events %}
+  <div class="event-card">
+    <div class="image-wrapper">
+      <img src="{{ url_for('static', filename='uploads/events/' + event.image_filename) }}" alt="Event Image">
+    </div>
+    <h3>{{ event.title }}</h3>
+    <p>{{ event.description }}</p>
+    <small>📅 {{ event.event_date }}</small>
+  </div>
+{% endfor %}
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 18 HOUSE Mandal. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
